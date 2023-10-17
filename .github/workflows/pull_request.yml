@@ -4,5 +4,5 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps: 
-      -name: Print contex
-       run: echo "${{ github }}"
+      - name: Print contex
+        run: echo "${{ github }}"
