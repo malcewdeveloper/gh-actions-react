@@ -1,22 +1,18 @@
 const config = {
-    "release": {
-      "branches": ["main"],
-      "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
+    branches: ['main'],
+    branches: ['main', 'develop'],
+    plugins: [
+        '@semantic-release/commit-analyzer',
+        '@semantic-release/release-notes-generator',
         "@semantic-release/changelog",
         "@semantic-release/npm",
-        "@semantic-release/github",
-        [
-          "@semantic-release/exec",
-          {
-            "prepareCmd": "echo 'Preparing MVP release'"
-          }
-        ]
-      ],
-      "extends": "@semantic-release/npm",
-      "tagFormat": "${version}-mvp.${next(0)}"
-    }
+        ["@semantic-release/git", {
+            "assets": ["dist/*.js", "dist/*.js.map"],
+            "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }],
+        '@semantic-release/github'
+    ]
 };
 
 module.exports = config;
+
