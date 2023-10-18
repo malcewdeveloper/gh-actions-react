@@ -3,7 +3,7 @@ import React from "react";
 
 const Menu = (props) => {
     return (
-        <div>
+        <div style={ props.style }>
             { props.children }
         </div>
     )
