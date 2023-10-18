@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Input from './component/Input/Input';
 import Layout from './component/Layout/Layout';
+import Text from './component/Text/Text';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <img src={logo} className="App-logo" alt="logo" />
         <Layout>
+          <Text>Hello</Text>
           <Input type='text'>Hello</Input>
         </Layout>
         <p> 
