@@ -37,7 +37,10 @@
     ]
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.1",
     "eslint": "^8.51.0",
-    "eslint-config-react-app": "^7.0.1"
+    "eslint-config-react-app": "^7.0.1",
+    "semantic-release": "^22.0.5"
   }
 }
