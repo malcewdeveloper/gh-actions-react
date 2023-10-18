@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Input from './component/Input/Input';
+import Layout from './component/Layout/Layout';
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <img src={logo} className="App-logo" alt="logo" />
-        <Input type='text'>Hello</Input>
+        <Layout>
+          <Input type='text'>Hello</Input>
+        </Layout>
         <p> 
           Edit <code>src/App.js</code> and save to reload.
         </p>
